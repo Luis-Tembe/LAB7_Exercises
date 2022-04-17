@@ -1,4 +1,4 @@
-public class Pigeon extends Bird{
+public class Pigeon extends Bird implements AnimalName,AnimalBehavior,AnimalMove{
     private int NO_Species;
     Pigeon(){
         super();
@@ -30,5 +30,17 @@ public class Pigeon extends Bird{
     public void setNoSpecies(int w){this.NO_Species=w;};
     public String ToString(){
         return "Pigeon :\n "+"Number of Species : "+NO_Species;
+    }
+
+    @Override
+    public void Sleep(String Sound) {
+        Sound="Zzzzz";
+        System.out.println(Sound);
+
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Pigeon Fly");
     }
 }

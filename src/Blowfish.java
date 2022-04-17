@@ -1,4 +1,4 @@
-public class Blowfish extends Fish{
+public class Blowfish extends Fish implements AnimalName,AnimalBehavior,AnimalMove{
     private String TypeTembe57169;
     public Blowfish(){
         super();
@@ -32,5 +32,16 @@ public class Blowfish extends Fish{
     public void setType(String w){this.TypeTembe57169=w;};
     public String ToString(){
         return "BlowFish :\n "+"Type : "+TypeTembe57169;
+    }
+
+    @Override
+    public void Sleep(String Sound) {
+        Sound="Zzzzzz";
+        System.out.println(Sound);
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Blowfish swim");;
     }
 }

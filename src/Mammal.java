@@ -1,4 +1,4 @@
- class Mammal extends Animal {
+ class Mammal extends Animal implements AnimalMove,AnimalBehavior,AnimalName{
     private String orderTembe57169;
      public Mammal(){
          super();
@@ -28,4 +28,11 @@
      public String ToStringTembe57169(){
          return "Mammal :\n "+"Order : "+orderTembe57169;
      }
-}
+
+
+     @Override
+     public void Sleep(String Sound) {
+         Sound="Zzzzz";
+     }
+
+ }

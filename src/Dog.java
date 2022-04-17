@@ -1,4 +1,4 @@
-public class Dog extends Mammal{
+public class Dog extends Mammal implements AnimalBehavior,AnimalMove{
     private String FavColorTembe57169;
     Dog(){
         super();
@@ -32,5 +32,17 @@ public class Dog extends Mammal{
     public void setFavColorTembe57169(String w){this.FavColorTembe57169=w;};
     public String ToString(){
         return "Dog :\n "+"Favorite Color : "+FavColorTembe57169;
+    }
+
+
+    @Override
+    public void Sleep(String Sound) {
+        Sound="Zzzzz";
+        System.out.println(Sound);
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Dog runs");
     }
 }

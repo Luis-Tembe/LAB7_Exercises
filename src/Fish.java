@@ -1,4 +1,6 @@
-class Fish extends Animal{
+import jdk.swing.interop.SwingInterOpUtils;
+
+class Fish extends Animal implements AnimalMove{
     private String General_typeTembe57169;
     public Fish(){
         super();
@@ -27,6 +29,11 @@ class Fish extends Animal{
     public void setGTypeTembe57169(String w){this.General_typeTembe57169=w;};
     public String ToString(){
         return "Fish :\n "+"General Type of Fish : "+General_typeTembe57169;
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Fish move");
     }
 }
 

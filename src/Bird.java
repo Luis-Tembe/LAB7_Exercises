@@ -1,4 +1,4 @@
-class Bird extends Animal {
+class Bird extends Animal implements AnimalMove {
     private String Type_BirdTembe57169;
     public Bird(){
         super();
@@ -27,5 +27,11 @@ class Bird extends Animal {
     public void setTypeTembe57169(String w){this.Type_BirdTembe57169=w;};
     public String ToString(){
         return "Bird :\n "+"Type of Bird : "+Type_BirdTembe57169;
+    }
+
+
+    @Override
+    public void move() {
+        System.out.println("Bird move");
     }
 }

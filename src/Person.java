@@ -31,8 +31,30 @@ public class Person {
 
     }
 
+    interface Salary{
+    int rateTembe57169 = 0;
+    int ExtraHoursTembe57169=0;
 
-   class Staff extends Person{
+    void SalaryToPayTembe57169(int hours, int rate);
+
+    default int SalaryOverTimeTembe57169(int ExtraHoursTembe57169, int rateTembe57169){
+        int salaryOverTimeTembe57169= ExtraHoursTembe57169*rateTembe57169;
+        return salaryOverTimeTembe57169;
+    }
+
+    static void CheckBonusTembe57169(int YearsOfExperienceTembe67169){
+        if (YearsOfExperienceTembe67169>=5){
+            System.out.println("Yes employee should receive bonus");
+        } else {
+            System.out.println("Employee doesn't deserve bonus");
+        }
+
+    }
+
+}
+
+
+   class Staff extends Person implements Salary{
        String educationLuis57169, PositionLuis57169;
        void Initialize1() throws IOException{
            initialize();
@@ -48,4 +70,19 @@ public class Person {
            System.out.println("Education: "+educationLuis57169);
            System.out.println("Position: "+ PositionLuis57169);
        }
+
+
+       @Override
+       public void SalaryToPayTembe57169(int hours, int rate) {
+           System.out.println("The salary to pay is "+ hours*rate);
+       }
+
+       @Override
+        public int SalaryOverTimeTembe57169(int ExtraHoursTembe57169, int rateTembe57169){
+           return 10*30;
+       }
+
+
+
+
    }
